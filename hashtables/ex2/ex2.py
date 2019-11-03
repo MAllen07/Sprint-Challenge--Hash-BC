@@ -24,9 +24,9 @@ for ticket in tickets:
        hash_table_insert(hashtable, ticket.source, ticket.destination)
 
     # here if find the location of 
-    location = hash_table_retrieve hashtable, ["NONE"]
+    location = hash_table_retrieve(hashtable, "NONE")
 
-    for i in range(length):
+    for i in range(0, length):
         route[i] = location
         location = hash_table_retrieve(hashtable, location)
 
